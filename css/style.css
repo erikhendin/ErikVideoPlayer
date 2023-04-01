@@ -10,12 +10,12 @@ body {
   margin: 0;
   padding: 2em;
   display: flex;
-  background: #7A419B;
+  background: #000;
   min-height: 100vh;
-  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
   background-size: cover;
   align-items: center;
   justify-content: center;
+  font-family:Helvetica, Arial, sans-serif;
 }
 
 .wrapper {
@@ -29,23 +29,41 @@ body {
 .wrapper > * {
   padding: 10px;
   flex: 1 100%;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  justify-content: center;
+}
+
+.videowrapper{
+  display:flex;
+  flex: 1 100%;
+  width:100%;
+  text-align:center;
+  justify-content: center;
 }
 
 .header {
-  background: tomato;
+  background: lavender;
 }
 
 .footer {
-  background: lightgreen;
+  background: lightskyblue;
 }
 
 .main {
-  text-align: left;
   background: deepskyblue;
+  display:flex;
 }
 
+#titleText{
 
+}
  
+#captionText{
+
+}
+
 @media all and (min-width: 600px) {
 }
 
@@ -56,13 +74,18 @@ body {
   .footer  { order: 4; }
 }
 
-.player {
-  max-width: 750px;
+@media all and (max-width: 400px) {
+  #captionText {display:none;}
+}
+
+.player {   
   border: 5px solid rgba(0,0,0,0.2);
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  max-width: 750px;
   position: relative;
   font-size: 0;
   overflow: hidden;
+
 }
 
 /* This css is only applied when fullscreen is active. */
@@ -78,6 +101,9 @@ body {
 
 .player__video {
   width: 100%;
+  display:flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .player__button {

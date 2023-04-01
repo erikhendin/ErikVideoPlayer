@@ -2,13 +2,26 @@
 /**************** SET UP DATA *******************************/
 
 const musicVideos = [
-  { song: 'I Am the Wind', filepath: 'videos/IAmTheWind_Hendin.mp4', caption: "One of the most fun recordings and videos I have ever done. Animation by the amazing Yuliya Osaka" },
-  { song: 'The Test of Time', filepath: 'videos/TheTestOfTime_Hendin.mov', caption: "Video was done using a rented camera, hand figures, wood, props and paint from Blick Art. Also super fund to record." },
-  { song: 'Rosalie McFall', filepath: 'videos/RosalieMcFall_Hendin.m4v', caption: "Cover song of Grateful Dead version. Always loved this song." },
-  { song: 'I\'m a Survivor', filepath: 'videos/ImASurvivor_Hendin.mp4', caption: "Inspired by a terrible loss that changed me, but also connected me with others who had been through the same thing." },
-  { song: 'Monkey Dance', filepath: 'videos/MonkeyDance_Hendin.mp4', caption: "Random experience with this one: Some goofy fun done with garageband. Written during nights at a tennis camp for adults." },
-  { song: 'Once in a While', filepath: 'videos/OnceInAWhile_Hendin.mp4', caption: "This was an old recording that revived by amazing animator Gosha Loshadkin - Gosha created the concept and executed beautifully and I am forever grateful to him." },
-  { song: 'Henry Poole is Here', filepath: 'videos/HenryPooleIsHere_Hendin.mp4', caption: "Written for a Movie/Song Contest - Movie is Henry Poole is Here which is a quirky indie film" }
+  { song: 'I Am the Wind', filepath: 'videos/IAmTheWind_Hendin.mp4', 
+  caption: "This was one of the most fun recordings and videos I have ever done. Animation by the amazing Yuliya Osaka" },
+  
+  { song: 'The Test of Time', filepath: 'videos/TheTestOfTime_Hendin.mov', 
+  caption: "This video was done using a rented camera, hand figures, wood, props and paint from Blick Art. Also super fund to record." },
+  
+  { song: 'Rosalie McFall', filepath: 'videos/RosalieMcFall_Hendin.m4v', 
+  caption: "This is a cover of the Grateful Dead version. I always loved this song." },
+  
+  { song: 'I\'m a Survivor', filepath: 'videos/ImASurvivor_Hendin.mp4', 
+  caption: "This song was inspired by a terrible loss that changed me, but it also connected me with many others who had been through the same thing." },
+  
+  { song: 'Monkey Dance', filepath: 'videos/MonkeyDance_Hendin.mp4', 
+  caption: "This was some goofy fun I came up with using Garageband. One shot of the monkeys is actually from my honeymoon in Costa Rica." },
+  
+  { song: 'Once in a While', filepath: 'videos/OnceInAWhile_Hendin.mp4', 
+  caption: "This was an old recording that was revived the video, in large part thanks to the amazing animator Gosha Loshadkin - Gosha created the concept and executed beautifully and I am forever grateful to him." },
+  
+  { song: 'Henry Poole is Here', filepath: 'videos/HenryPooleIsHere_Hendin.mp4', 
+  caption: "This song was written for a Movie/Song Contest for a quirky indie movie I always liked, Henry Poole is Here." }
 ];
 
 /**************** GRAB DOM ELEMENTS *************************/
