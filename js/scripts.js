@@ -22,7 +22,6 @@ let titleText = document.querySelector('#titleText');
 // text for caption of song - every time we choose song from dropdown caption of song should populate here:
 let captionText = document.querySelector('#captionText');
 
-
 //player
 const player = document.querySelector('.player');
 // note that inside of player we have everythign else
@@ -185,7 +184,7 @@ toggle.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 
-video.getAttribute('src').addEventListener('change', updateButton);
+
 
 // listen: when video emits timeupdate event
 // run handleProgress which will handle progress bar via handleProgress() function
