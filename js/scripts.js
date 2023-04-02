@@ -79,6 +79,11 @@ function changeVideoSrc(event){
 select[this.filepath] = this.value;
   console.log(select.value);
   video.setAttribute("src", select[this.filepath]);   
+
+  // set play/pause button to play - this is a temp hard coded fix
+  // every time video src is changed the button should be play icon
+  // because the video is paused
+  icon = '►'; 
 }
 
 // Update the Song Title and Caption displayed - when I select a song, I want to see its respective title and caption
