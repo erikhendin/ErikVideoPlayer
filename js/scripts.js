@@ -2,25 +2,25 @@
 /**************** SET UP DATA *******************************/
 
 const musicVideos = [
-  { song: 'I Am the Wind', filepath: 'videos/IAmTheWindHendin.mp4', 
+  { song: 'I Am the Wind', filepath: 'https://s3.amazonaws.com/erikhendin.com/videos/IAmTheWindHendin.mp4', 
   caption: "This was one of the most fun recordings and videos I have ever done. Animation by the amazing Yuliya Osaka" },
   
-  { song: 'The Test of Time', filepath: 'videos/TheTestOfTimeHendin.mov', 
+  { song: 'The Test of Time', filepath: 'https://s3.amazonaws.com/erikhendin.com/videos/TheTestOfTimeHendin.mov', 
   caption: "This video was done using a rented camera, hand figures, wood, props and paint from Blick Art. Also super fund to record." },
   
-  { song: 'Rosalie McFall', filepath: 'videos/RosalieMcFallHendin.m4v', 
+  { song: 'Rosalie McFall', filepath: 'https://s3.amazonaws.com/erikhendin.com/videos/RosalieMcFallHendin.m4v', 
   caption: "This is a cover of the Grateful Dead version. I always loved this song." },
   
-  { song: 'I\'m a Survivor', filepath: 'videos/ImASurvivorHendin.mp4', 
+  { song: 'I\'m a Survivor', filepath: 'https://s3.amazonaws.com/erikhendin.com/videos/ImASurvivorHendin.mp4', 
   caption: "This song was inspired by a terrible loss that changed me, but it also connected me with many others who had been through the same thing." },
   
-  { song: 'Monkey Dance', filepath: 'videos/MonkeyDanceHendin.mp4', 
+  { song: 'Monkey Dance', filepath: 'https://s3.amazonaws.com/erikhendin.com/videos/MonkeyDanceHendin.mp4', 
   caption: "This was some goofy fun I came up with using Garageband. One shot of the monkeys is actually from my honeymoon in Costa Rica." },
   
-  { song: 'Once in a While', filepath: 'videos/OnceInAWhileHendin.mp4', 
+  { song: 'Once in a While', filepath: 'https://s3.amazonaws.com/erikhendin.com/videos/OnceInAWhileHendin.mp4', 
   caption: "This was an old recording that was revived the video, in large part thanks to the amazing animator Gosha Loshadkin - Gosha created the concept and executed beautifully and I am forever grateful to him." },
   
-  { song: 'Henry Poole is Here', filepath: 'videos/HenryPooleIsHereHendin.mp4', 
+  { song: 'Henry Poole is Here', filepath: 'https://s3.amazonaws.com/erikhendin.com/videos/HenryPooleIsHereHendin.mp4', 
   caption: "This song was written for a Movie/Song Contest for a quirky indie movie I always liked, Henry Poole is Here." }
 ];
 
