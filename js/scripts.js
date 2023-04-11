@@ -73,18 +73,21 @@ const mysongs = musicVideos.map(musicVideo => {
     select.insertBefore(option, select.lastChild);    
 });
 
+
+
+
 // Update the Video Source with the filename from Select dropdown option
-function changeVideoSrc(event){
+function changeVideoSrc(){
 // get the filepath value from select element
 select[this.filepath] = this.value;
   console.log(select.value);
+  //  each time we select a new video pause the existing one 
+  video.paused = true;
+  toggle.textContent = '►'; 
   video.setAttribute("src", select[this.filepath]);   
-
-  // set play/pause button to play - this is a temp hard coded fix
-  // every time video src is changed the button should be play icon
-  // because the video is paused
-  icon = '►'; 
 }
+
+
 
 // Update the Song Title and Caption displayed - when I select a song, I want to see its respective title and caption
 function updateTitleAndCaption(event){
@@ -95,6 +98,7 @@ function updateTitleAndCaption(event){
   titleText.textContent=titleDS;
   captionText.textContent=captionDS;
 };
+
 
 
 // toggle play and pause
@@ -243,3 +247,34 @@ progress.addEventListener('mouseleave', () => isMouseDown  = false);
 
 // listen for click of Fullscreen icon
 fullscreen.addEventListener("click", openFullscreen);
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+
+// Load default selection upon page(window) load
+window.onload = function(){
+  let myRan =getRandomInt(musicVideos.length);
+  console.log("selected index: " + select.selectedIndex);
+  let videoFile =musicVideos[myRan].filepath;
+  let songName=musicVideos[myRan].song;
+  let videoCaption=musicVideos[myRan].caption;
+  select.selectedIndex = myRan+1;
+  
+
+  console.log("videofile: " + videoFile);
+  console.log("songName: " + songName);
+  console.log("videoCaption: " + videoCaption);
+
+  loadDefault(videoFile, songName, videoCaption);
+}
+
+function loadDefault(videoFile, songName, videoCaption){
+  video.setAttribute("src", videoFile);
+  titleText.textContent=songName;
+  captionText.textContent=videoCaption;
+  video.paused = true;
+  toggle.textContent = '►'; 
+
+};
