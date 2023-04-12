@@ -186,6 +186,42 @@ function scrub(e) {
  video.currentTime = scrubTime;
 }
 
+/********** UPON LOAD OF PAGE : SELECT RANDOM VIDEO *********************/
+
+// Load default selection upon page(window) load
+window.onload = function(){
+  // select random number with range of music videos array
+  let myRan =getRandomInt(musicVideos.length);
+  console.log("selected index: " + select.selectedIndex);
+  // use the random number above to drive video selection, title and caption
+  let videoFile =musicVideos[myRan].filepath;
+  let songName=musicVideos[myRan].song;
+  let videoCaption=musicVideos[myRan].caption;
+  select.selectedIndex = myRan+1;
+
+  console.log("videofile: " + videoFile);
+  console.log("songName: " + songName);
+  console.log("videoCaption: " + videoCaption);
+
+  // load them into console
+  loadDefault(videoFile, songName, videoCaption);
+}
+
+
+function loadDefault(videoFile, songName, videoCaption){
+  // change/set src of video 
+  video.setAttribute("src", videoFile);
+  // update the title of the song in the UI
+  titleText.textContent=songName;
+  // update the caption/description in the UI
+  captionText.textContent=videoCaption;
+  // pause the video - this is a semi-workaround to address some unexpected behavior in certain ui scenarios
+  video.paused = true;
+  // set the play button to play - workaround for UI issue with play/pause behavior in certain ui scenarios
+  toggle.textContent = '►'; 
+
+};
+
 /********** HOOK UP EVENT LISTENERS *********************/
 
 
@@ -205,8 +241,6 @@ toggle.addEventListener('click', togglePlay);
 // then we will run updateButton and update the play button 
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
-
-
 
 // listen: when video emits timeupdate event
 // run handleProgress which will handle progress bar via handleProgress() function
@@ -248,33 +282,8 @@ progress.addEventListener('mouseleave', () => isMouseDown  = false);
 // listen for click of Fullscreen icon
 fullscreen.addEventListener("click", openFullscreen);
 
+// Random Number function we will use when we load random video from list upon load of page
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-
-// Load default selection upon page(window) load
-window.onload = function(){
-  let myRan =getRandomInt(musicVideos.length);
-  console.log("selected index: " + select.selectedIndex);
-  let videoFile =musicVideos[myRan].filepath;
-  let songName=musicVideos[myRan].song;
-  let videoCaption=musicVideos[myRan].caption;
-  select.selectedIndex = myRan+1;
-  
-
-  console.log("videofile: " + videoFile);
-  console.log("songName: " + songName);
-  console.log("videoCaption: " + videoCaption);
-
-  loadDefault(videoFile, songName, videoCaption);
-}
-
-function loadDefault(videoFile, songName, videoCaption){
-  video.setAttribute("src", videoFile);
-  titleText.textContent=songName;
-  captionText.textContent=videoCaption;
-  video.paused = true;
-  toggle.textContent = '►'; 
-
-};
