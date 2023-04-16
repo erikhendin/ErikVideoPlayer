@@ -35,13 +35,21 @@ body {
   justify-content: center;
 }
 
+article{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+
+}
+
 .videowrapper{
   display:flex;
   flex: 1 100%;
-  width:100%;
-  text-align:center;
+  max-width:700px;
+  align:center;
   justify-content: center;
-}
+  flex-direction:column;
+  }
 
 .header {
   background: lavender;
@@ -61,8 +69,11 @@ body {
 #titleText{
 
 }
- 
+
+
+
 #captionText{
+
 
 }
 

@@ -85,6 +85,8 @@ select[this.filepath] = this.value;
   video.paused = true;
   toggle.textContent = '►'; 
   video.setAttribute("src", select[this.filepath]);   
+  captionText.style.width = video.style.width;
+/* getElementById("myBtn"). style. width = "300px"; */
 }
 
 
