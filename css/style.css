@@ -6,6 +6,8 @@ html {
   box-sizing: inherit;
 }
 
+
+
 body {
   margin: 0;
   padding: 2em;
@@ -18,11 +20,14 @@ body {
   font-family:Helvetica, Arial, sans-serif;
 }
 
+canvas{position:fixed;z-index:-1}
+
 .wrapper {
   display: flex;  
   flex-flow: row wrap;
   font-weight: bold;
   text-align: center; 
+  z-index:0;
 }
 
 /* all items 100% width / via flex-basis */
